@@ -13,18 +13,16 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     properties:
       hibernate:
         format_sql: true
+        default_catalog: test_icon
     open-in-view: false
 
   h2:
     console:
       enabled: true
-
-database:
-  catalog: test_icon
 
 security:
   cors:
