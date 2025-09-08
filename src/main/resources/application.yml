@@ -22,3 +22,13 @@ spring:
   h2:
     console:
       enabled: true
+
+database:
+  catalog: test_icon
+
+security:
+  cors:
+    paths:
+      - ${APP_FRONT}
+      - ${CREATOR_FRONT}
+      - ${ADMIN_FRONT}
