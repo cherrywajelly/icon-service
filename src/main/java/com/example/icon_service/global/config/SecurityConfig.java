@@ -40,16 +40,16 @@ public class SecurityConfig {
                 .headers(httpSecurityHeaders -> httpSecurityHeaders.frameOptions(frameOptionsConfig -> frameOptionsConfig.sameOrigin()))
                 .authorizeHttpRequests(
                         request -> {
-                            request.requestMatchers("/api/icon/v4/**").hasAnyRole("MANAGER");
+                            request.requestMatchers("/icon/api/v4/**").hasAnyRole("MANAGER");
 
-                            request.requestMatchers("/api/icon/v3/**").hasAnyRole("MANAGER", "STAFF");
+                            request.requestMatchers("/icon/api/v3/**").hasAnyRole("MANAGER", "STAFF");
 
-                            request.requestMatchers("/api/icon/v2/**").hasAnyRole("CREATOR");
+                            request.requestMatchers("/icon/api/v2/**").hasAnyRole("CREATOR");
 
-                            request.requestMatchers("/api/icon/v1/**").hasAnyRole("MANAGER","STAFF","CREATOR","USER");
+                            request.requestMatchers("/icon/api/v1/**").hasAnyRole("MANAGER","STAFF","CREATOR","USER");
 
                             request.requestMatchers( "/actuator/**", "/docs/**", "/v3/api-docs/**",
-                                    "/swagger-ui/**","/api-docs/**", "/icon-docs/**").permitAll();
+                                    "/swagger-ui/**","/api-docs/**").permitAll();
 
                             request.anyRequest().authenticated();
 
