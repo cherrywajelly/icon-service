@@ -30,3 +30,10 @@ security:
       - ${APP_FRONT}
       - ${CREATOR_FRONT}
       - ${ADMIN_FRONT}
+
+springdoc:
+  swagger-ui:
+    path: /api-docs/icon/index.html
+#    enabled: true
+#    url: /docs/openapi3.json
+#    path: /icon-docs/v1/api-docs/index.html
